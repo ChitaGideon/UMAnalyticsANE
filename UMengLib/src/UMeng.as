@@ -2,6 +2,7 @@ package
 {
 	import flash.events.EventDispatcher;
 	import flash.external.ExtensionContext;
+	import flash.system.Capabilities;
 
 
 	/**
@@ -26,13 +27,19 @@ package
 	{
 		private static var _instance:UMeng;
 		private static var extensionContext:ExtensionContext;
+		
+		/**  is supported on iOS and Android devices. */
+		public static function get isSupported() : Boolean
+		{
+			return Capabilities.manufacturer.indexOf("iOS") != -1 || Capabilities.manufacturer.indexOf("Android") != -1;
+		}
 
 		public static function get instance():UMeng
 		{
 			if (!_instance)
 			{
 				_instance=new UMeng();
-				if (!extensionContext)
+				if (!extensionContext&&isSupported)
 				{
 					extensionContext=ExtensionContext.createExtensionContext('com.pamakids.UMeng', '');
 				}
@@ -84,6 +91,16 @@ package
 		{
 			if (extensionContext)
 				extensionContext.call("onEventEnd", eventID, label);
+		}
+		public function beginLogPageView(pageName:String):void
+		{
+			if (extensionContext)
+				extensionContext.call("beginLogPageView", pageName);
+		}
+		public function endLogPageView(pageName:String):void
+		{
+			if (extensionContext)
+				extensionContext.call("endLogPageView", pageName);
 		}
 
 		public function onEventDuration(eventID:String, time:int, label:String=null, map:Array=null):void

@@ -20,6 +20,38 @@ FREObject onPause(FREContext context, void* funcData, uint32_t argc, FREObject a
     //不需要
     return nil;
 }
+FREObject beginEvent(FREContext context, void* funcData, uint32_t argc, FREObject argv[]){
+    
+    const uint8_t* str;
+    uint32_t stringLength1;
+    FREGetObjectAsUTF8(argv[0], &stringLength1, &str);
+    [MobClick beginEvent:[NSString stringWithUTF8String:(char*)str]];
+    return nil;
+}
+FREObject endEvent(FREContext context, void* funcData, uint32_t argc, FREObject argv[]){
+    
+    const uint8_t* str;
+    uint32_t stringLength1;
+    FREGetObjectAsUTF8(argv[0], &stringLength1, &str);
+    [MobClick endEvent:[NSString stringWithUTF8String:(char*)str]];
+    return nil;
+}
+FREObject beginLogPageView(FREContext context, void* funcData, uint32_t argc, FREObject argv[]){
+
+    const uint8_t* str;
+    uint32_t stringLength1;
+    FREGetObjectAsUTF8(argv[0], &stringLength1, &str);
+    [MobClick beginLogPageView:[NSString stringWithUTF8String:(char*)str]];
+    return nil;
+}
+FREObject endLogPageView(FREContext context, void* funcData, uint32_t argc, FREObject argv[]){
+
+    const uint8_t* str;
+    uint32_t stringLength1;
+    FREGetObjectAsUTF8(argv[0], &stringLength1, &str);
+    [MobClick endLogPageView:[NSString stringWithUTF8String:(char*)str]];
+    return nil;
+}
 
 FREObject startAnaly(FREContext context, void* funcData, uint32_t argc, FREObject argv[]){
     
@@ -62,12 +94,17 @@ FREObject getUDID(FREContext context, void* funcData, uint32_t argc, FREObject a
 }
 
 FREObject onEvent(FREContext context, void* funcData, uint32_t argc, FREObject argv[]){
-    NSLog(@"Called onEvent Function");
+    NSLog(@"onEvent begin?");
     const uint8_t* eventID;
     const uint8_t* eventLabel;
+    uint32_t stringLength1;
+    uint32_t stringLength2;
     
-    FREGetObjectAsUTF8(argv[0], 0, &eventID);
-    FREGetObjectAsUTF8(argv[1], 0, &eventLabel);
+    FREGetObjectAsUTF8(argv[0], &stringLength1, &eventID);
+    FREGetObjectAsUTF8(argv[1], &stringLength2, &eventLabel);
+    
+    
+    NSLog(@"Called onEvent Function, eventID: %s , eventLabel: %s",eventID, eventLabel);
     
     if(eventLabel != NULL)
     {
@@ -81,7 +118,7 @@ FREObject onEvent(FREContext context, void* funcData, uint32_t argc, FREObject a
 
 void UMengContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, uint32_t* numFunctionsToTest,
                              const FRENamedFunction** functionsToSet){
-    uint numOfFun = 5;
+    uint numOfFun = 9;
     
     FRENamedFunction* func = (FRENamedFunction*) malloc(sizeof(FRENamedFunction) * numOfFun);
     *numFunctionsToTest = numOfFun;
@@ -105,6 +142,24 @@ void UMengContextInitializer(void* extData, const uint8_t* ctxType, FREContext c
     func[4].name = (const uint8_t*) "onResume";
     func[4].functionData = NULL;
     func[4].function = &onResume;
+    
+    
+    func[5].name = (const uint8_t*) "beginLogPageView";
+    func[5].functionData = NULL;
+    func[5].function = &beginLogPageView;
+    
+    
+    func[6].name = (const uint8_t*) "endLogPageView";
+    func[6].functionData = NULL;
+    func[6].function = &endLogPageView;
+    
+    func[7].name = (const uint8_t*) "onEventBegin";
+    func[7].functionData = NULL;
+    func[7].function = &beginEvent;
+    
+    func[8].name = (const uint8_t*) "onEventEnd";
+    func[8].functionData = NULL;
+    func[8].function = &endEvent;
     
     *functionsToSet = func;
     

@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A8387111957E25E005803CD /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A83870F1957E25E005803CD /* libMobClickLibrary.a */; };
+		3A8387121957E25E005803CD /* MobClick.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A8387101957E25E005803CD /* MobClick.h */; };
 		3C1138EE1793CBBE004927F7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1138EC1793CBA3004927F7 /* CoreLocation.framework */; };
 		3C1138EF1793CBBE004927F7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1138EA1793CB98004927F7 /* MapKit.framework */; };
 		3C1138F01793CBBE004927F7 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1138E81793CB88004927F7 /* MessageUI.framework */; };
 		3C1138F11793CBBE004927F7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1138E61793CB7F004927F7 /* QuartzCore.framework */; };
 		3C391648178E9838001E6860 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C391647178E9838001E6860 /* Foundation.framework */; };
 		3C39164F178E9838001E6860 /* UMeng.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C39164E178E9838001E6860 /* UMeng.m */; };
-		3C391658178E9861001E6860 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C391656178E9861001E6860 /* libMobClickLibrary.a */; };
 		3C391669178EAFEF001E6860 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C391665178EAFDA001E6860 /* CoreGraphics.framework */; };
 		3C39166A178EAFF6001E6860 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C391667178EAFE5001E6860 /* UIKit.framework */; };
 		3C39166C178EB00C001E6860 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C39166B178EB00C001E6860 /* libz.dylib */; };
@@ -35,6 +36,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3A83870F1957E25E005803CD /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
+		3A8387101957E25E005803CD /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
 		3C1138E61793CB7F004927F7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3C1138E81793CB88004927F7 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		3C1138EA1793CB98004927F7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -43,8 +46,6 @@
 		3C391647178E9838001E6860 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3C39164B178E9838001E6860 /* UMeng-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UMeng-Prefix.pch"; sourceTree = "<group>"; };
 		3C39164E178E9838001E6860 /* UMeng.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMeng.m; sourceTree = "<group>"; };
-		3C391656178E9861001E6860 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
-		3C391657178E9861001E6860 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
 		3C391665178EAFDA001E6860 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3C391667178EAFE5001E6860 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3C39166B178EB00C001E6860 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -65,23 +66,32 @@
 				3C1138F01793CBBE004927F7 /* MessageUI.framework in Frameworks */,
 				3C1138F11793CBBE004927F7 /* QuartzCore.framework in Frameworks */,
 				3C39166C178EB00C001E6860 /* libz.dylib in Frameworks */,
-				3C391658178E9861001E6860 /* libMobClickLibrary.a in Frameworks */,
 				3C391669178EAFEF001E6860 /* CoreGraphics.framework in Frameworks */,
 				3C39166A178EAFF6001E6860 /* UIKit.framework in Frameworks */,
 				3C391648178E9838001E6860 /* Foundation.framework in Frameworks */,
+				3A8387111957E25E005803CD /* libMobClickLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A83870E1957E25E005803CD /* UMAnalytics_Sdk_3.1.3.OpenUDID */ = {
+			isa = PBXGroup;
+			children = (
+				3A83870F1957E25E005803CD /* libMobClickLibrary.a */,
+				3A8387101957E25E005803CD /* MobClick.h */,
+			);
+			path = UMAnalytics_Sdk_3.1.3.OpenUDID;
+			sourceTree = "<group>";
+		};
 		3C391639178E9838001E6860 = {
 			isa = PBXGroup;
 			children = (
+				3A83870E1957E25E005803CD /* UMAnalytics_Sdk_3.1.3.OpenUDID */,
 				3C746DD417A8E8F000BA1F16 /* CFNetwork.framework */,
 				3C746DD217A8E84100BA1F16 /* FlashRuntimeExtensions.h */,
 				3C39166B178EB00C001E6860 /* libz.dylib */,
-				3C391655178E9861001E6860 /* UMAnalytics_Sdk_2.2.0.OpenUDID */,
 				3C391649178E9838001E6860 /* UMeng */,
 				3C391646178E9838001E6860 /* Frameworks */,
 				3C391645178E9838001E6860 /* Products */,
@@ -130,15 +140,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3C391655178E9861001E6860 /* UMAnalytics_Sdk_2.2.0.OpenUDID */ = {
-			isa = PBXGroup;
-			children = (
-				3C391656178E9861001E6860 /* libMobClickLibrary.a */,
-				3C391657178E9861001E6860 /* MobClick.h */,
-			);
-			path = UMAnalytics_Sdk_2.2.0.OpenUDID;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -148,6 +149,7 @@
 			files = (
 				3C746DD317A8E84100BA1F16 /* FlashRuntimeExtensions.h in Headers */,
 				3C746DD817A8FD4A00BA1F16 /* OpenUDID.h in Headers */,
+				3A8387121957E25E005803CD /* MobClick.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +284,8 @@
 					"\"$(SRCROOT)/UMAnalytics_Sdk_2.2.0.OpenUDID\"",
 					"\"$(SRCROOT)/UMSocial_Sdk_2.2.1\"",
 					"\"$(SRCROOT)/UMSocial_Sdk_2.2.1/frameworks/Wechat\"",
+					"$(PROJECT_DIR)/UMAnalytics_Sdk_2.2.0.OpenUDID",
+					"$(PROJECT_DIR)/UMAnalytics_Sdk_3.1.3.OpenUDID",
 				);
 				New_Setting = "";
 				OTHER_LDFLAGS = "-ObjC";
@@ -303,6 +307,8 @@
 					"\"$(SRCROOT)/UMAnalytics_Sdk_2.2.0.OpenUDID\"",
 					"\"$(SRCROOT)/UMSocial_Sdk_2.2.1\"",
 					"\"$(SRCROOT)/UMSocial_Sdk_2.2.1/frameworks/Wechat\"",
+					"$(PROJECT_DIR)/UMAnalytics_Sdk_2.2.0.OpenUDID",
+					"$(PROJECT_DIR)/UMAnalytics_Sdk_3.1.3.OpenUDID",
 				);
 				New_Setting = "";
 				OTHER_LDFLAGS = "-ObjC";
