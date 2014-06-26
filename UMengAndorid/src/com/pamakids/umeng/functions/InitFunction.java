@@ -23,7 +23,7 @@ public class InitFunction implements FREFunction {
         Boolean isDebug;
         try {
             isDebug = args[2].getAsBool();
-            MobclickAgent.onError(context.getActivity());
+//            MobclickAgent.onError(context.getActivity());
             MobclickAgent.setDebugMode(isDebug);
             MobclickAgent.updateOnlineConfig(context.getActivity());
 
