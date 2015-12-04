@@ -13,9 +13,11 @@ public class UMengExtension implements FREExtension{
 
     public static final String TAG = "UMengExtension";
 
+    private static UMengContext context;
     @Override
     public FREContext createContext(String contextType){
-         return  new UMengContext();
+      context =  new UMengContext();
+         return     context;
     }
 
     @Override
@@ -27,5 +29,4 @@ public class UMengExtension implements FREExtension{
 
         Log.d(TAG, "UMengExtension initialized");
     }
-
 }

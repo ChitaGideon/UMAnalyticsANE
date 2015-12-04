@@ -36,9 +36,9 @@ public class EventDuration implements FREFunction {
             }
 
             if(label == null || label == "") {
-                MobclickAgent.onEventDuration(context1, eventID, time);
+              //  MobclickAgent.onEventDuration(context1, eventID, time);
             }else{
-                MobclickAgent.onEventDuration(context1, eventID, label, time);
+              //  MobclickAgent.onEventDuration(context1, eventID, label, time);
             }
 
         }catch (Exception e){

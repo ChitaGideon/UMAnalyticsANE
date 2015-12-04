@@ -20,7 +20,6 @@
 		<exec executable="xcodebuild" failonerror="true" dir="../${name}/">
 			<arg line="-project ${name}.xcodeproj"/>
 			<arg line="-sdk ${ios.sdkversion}"/>
-			<arg line="-arch armv7"/>
 			<arg line="-alltargets"/>
 			<arg line="-configuration Release"/>
 			<arg line="SYMROOT=../temp/ios/build/"/>
@@ -59,16 +58,16 @@
 		<delete dir="../android/temp"/>
 		<mkdir dir="../android/temp/classes"/>
 
-		<javac source="1.6" srcdir="../${name}Andorid/src" destdir="../android/temp/classes" includeantruntime="false">
+		<javac source="1.6" srcdir="../${name}Andorid/src" destdir="../android/temp/classes" includeantruntime="on" debug="true">
 			<classpath>
 				<pathelement location="${android.sdk}/android.jar"/>
 				<pathelement location="${FLEX_HOME}/lib/android/FlashRuntimeExtensions.jar"/>
-				<pathelement location="../libs/umeng_sdk.jar"/>
+				<pathelement location="../${name}Andorid/libs/umeng_sdk.jar"/>
 			</classpath>
 		</javac>
 
 		<mkdir dir="../android/temp/zip"/>
-		<unzip src="../libs/umeng_sdk.jar" dest="../android/temp/zip"/>
+		<unzip src="../${name}Andorid/libs/umeng_sdk.jar" dest="../android/temp/zip"/>
 		<copydir src="../android/temp/zip/com" dest="../android/temp/classes/com"/>
 
 		<mkdir dir="../temp/android/"/>

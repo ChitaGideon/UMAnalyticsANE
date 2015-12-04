@@ -56,15 +56,26 @@ public class EventFunction implements FREFunction {
 
         Context context1 = context.getActivity().getApplicationContext();
 
+        context.dispatchStatusEventAsync("LOGGING", eventID+"||");
         if (map != null) {
             Log.e(TAG, map.toString());
+        context.dispatchStatusEventAsync("LOGGING", "1");
+            //UMengExtension.log("map1");
             MobclickAgent.onEvent(context1, eventID, map);
+        context.dispatchStatusEventAsync("LOGGING", "2");
         }else if (label != null && label != "") {
             Log.e(TAG, eventID + label);
+             context.dispatchStatusEventAsync("LOGGING", "3");
             MobclickAgent.onEvent(context1, eventID, label);
+             context.dispatchStatusEventAsync("LOGGING", "4");
+            // UMengExtension.log("map2");
         }else {
             Log.e(TAG, eventID);
+             context.dispatchStatusEventAsync("LOGGING", "5");
             MobclickAgent.onEvent(context1, eventID);
+             context.dispatchStatusEventAsync("LOGGING", "6");
+            // UMengExtension.log("map3");
+
         }
 
         return null;

@@ -10,29 +10,29 @@
 	<string>UMeng</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>E0302603-C063-452A-B7D5-05889A333F15</key>
+		<key>F728794231947D27EF2FA6658B52697CC435E506</key>
 		<string>https://github.com/ChitaGideon/UMAnalyticsANE.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>UMeng/UMeng.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>E0302603-C063-452A-B7D5-05889A333F15</key>
+		<key>F728794231947D27EF2FA6658B52697CC435E506</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/ChitaGideon/UMAnalyticsANE.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>E0302603-C063-452A-B7D5-05889A333F15</string>
+	<string>F728794231947D27EF2FA6658B52697CC435E506</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>E0302603-C063-452A-B7D5-05889A333F15</string>
+			<string>F728794231947D27EF2FA6658B52697CC435E506</string>
 			<key>IDESourceControlWCCName</key>
 			<string>UMAnalyticsANE</string>
 		</dict>

@@ -1,6 +1,7 @@
 package
 {
 	import flash.events.EventDispatcher;
+	import flash.events.StatusEvent;
 	import flash.external.ExtensionContext;
 	import flash.system.Capabilities;
 
@@ -42,6 +43,8 @@ package
 				if (!extensionContext&&isSupported)
 				{
 					extensionContext=ExtensionContext.createExtensionContext('com.pamakids.UMeng', '');
+        			extensionContext.addEventListener(StatusEvent.STATUS, onStatus);
+
 				}
 			}
 			return _instance;
@@ -107,6 +110,13 @@ package
 		{
 			if (extensionContext)
 				extensionContext.call("onEventDuration", eventID, time, label, map);
+		}
+		private static function onStatus( event : StatusEvent ) : void
+		{
+			if(_instance.hasEventListener(StatusEvent.STATUS)) 
+			{
+				_instance.dispatchEvent(event);
+			}
 		}
 	}
 }

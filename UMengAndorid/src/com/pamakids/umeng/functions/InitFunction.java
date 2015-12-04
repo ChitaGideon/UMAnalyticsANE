@@ -24,12 +24,18 @@ public class InitFunction implements FREFunction {
         try {
             isDebug = args[2].getAsBool();
 //            MobclickAgent.onError(context.getActivity());
+
+             context.dispatchStatusEventAsync("LOGGING", "init1");
             MobclickAgent.setDebugMode(isDebug);
+             context.dispatchStatusEventAsync("LOGGING", "init2");
             MobclickAgent.updateOnlineConfig(context.getActivity());
+             context.dispatchStatusEventAsync("LOGGING", "init3");
 
             Log.e(TAG, isDebug.toString());
         }catch (Exception e){
             Log.e(TAG, e.toString());
+            context.dispatchStatusEventAsync("LOGGING", "error"+e.toString());
+
         }
 
         return null;
